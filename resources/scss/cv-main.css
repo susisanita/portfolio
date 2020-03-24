@@ -10,33 +10,33 @@
   font-size: 1rem;
   padding: 0.5rem 1rem;
   line-height: 1.3;
+  text-align: center;
 }
 
-.navbar #link-cv a {
+.navbar #link-selected a {
   color: #ffffff;
   font-weight: bold;
 }
 
-.navbar #link-cv a:hover {
+.navbar #link-selected a:hover {
   font-weight: bold;
-  font-size: 1.1rem;
 }
 
-.navbar #link-cv a:active {
+.navbar #link-selected a:active {
   color: #FF6F61;
 }
 
-.navbar #link-graph a, .navbar #link-arch a {
+.navbar #link-non-selected a {
   color: #F1F0E2;
   border: none;
   font-weight: lighter;
 }
 
-.navbar #link-graph a:hover, .navbar #link-arch a:hover {
+.navbar #link-non-selected a:hover {
   font-weight: normal;
 }
 
-.navbar #link-graph a:active, .navbar #link-arch a:active {
+.navbar #link-non-selected a:active {
   color: #FF6F61;
 }
 
@@ -116,22 +116,18 @@ body a {
   }
 }
 
-.navbar #link-graph {
-  text-align: center;
-}
-
 @media only screen and (max-width: 500px) {
-  .navbar #link-graph #graph1 {
+  .navbar #graph1 {
     display: none;
   }
 }
 
-.navbar #link-graph #graph2 {
+.navbar #graph2 {
   display: none;
 }
 
 @media only screen and (max-width: 500px) {
-  .navbar #link-graph #graph2 {
+  .navbar #graph2 {
     display: block;
   }
 }

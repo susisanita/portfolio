@@ -71,7 +71,7 @@ body {
         }
     }
     
-    #link-cv {
+    #link-selected {
         a {
             @extend %selected;
 
@@ -84,7 +84,7 @@ body {
         }
     }
 
-    #link-arch {
+    #link-non-selected {
         a {
             @extend %non-selected;
 
@@ -97,30 +97,17 @@ body {
         }
     }
 
-    #link-graph {
-        text-align: center;
-        a {
-            @extend %non-selected;
 
-            &:hover {
-                @extend %non-selected-hover;
-            }
-            &:active {
-                @extend %non-selected-active;
-            }
-        }
-
-        #graph1 {
-            @media only screen and (max-width: 500px) {
-                display: none;
-            }
-        }
-
-        #graph2 {
+    #graph1 {
+        @media only screen and (max-width: 500px) {
             display: none;
-            @media only screen and (max-width: 500px) {
-                display: block;
-            }
+        }
+    }
+
+    #graph2 {
+        display: none;
+        @media only screen and (max-width: 500px) {
+            display: block;
         }
     }
 

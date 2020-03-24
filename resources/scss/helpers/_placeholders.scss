@@ -6,6 +6,7 @@
     font-size: 1rem;
     padding: 0.5rem 1rem;
     line-height: 1.3;
+    text-align: center;
 }
 
 %selected {
@@ -17,7 +18,7 @@
 
 %selected-hover {
     font-weight: bold;
-    font-size: 1.1rem;
+    // font-size: 1.1rem;
     // border: 4px solid $white;
 }
 %selected-active {
