@@ -1,0 +1,179 @@
+@import "helpers/variables";
+@import "helpers/fonts";
+@import "helpers/placeholders";
+@import "helpers/mixins";
+
+// GENERAL -------------------------------------------
+body {
+    font-size: 16px;
+
+    a {
+        text-decoration: none;
+    }
+}
+
+// HEADER -------------------------------------------
+
+header {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+
+    .container {
+        width: 100%;
+        height: 100vh;
+        background-color: $white;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    
+        @media only screen and (max-width: $tablet) {
+            justify-content: start;
+        }
+    
+        .squares {
+            display: inline-flex;
+            justify-content: center;
+    
+            @media only screen and (max-width: $tablet) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    
+        h2 {
+            font-family: 'Open Sans', sans-serif;
+            // text-transform: uppercase;
+        }
+    
+        .cv {
+            @include square ($white, $blue-classic, 1.5rem, 6px solid $blue-classic);
+    
+            @media only screen and (max-width: $tablet) {
+                margin: 3rem 0 0 0;
+                transform: scale(0.9);
+            }
+            
+            h2 {
+                text-transform: uppercase;
+            }
+    
+            &:hover {
+                @include square-hover (10px solid $blue-classic, 2rem);
+            }
+            &:active {
+                @include square-active (10px solid $blue-classic, 2rem, $blue-classic, $cream);
+            }
+        }
+    
+        .architecture {
+            @include square ($blue-classic, $white, 1rem, none);
+    
+            @media only screen and (max-width: $tablet) {
+                margin: 1rem 0 0 0;
+                transform: scale(0.9);
+            }
+    
+            &:hover {
+                @include square-hover (none, 1.3rem);
+            }
+            &:active {
+                @include square-active (10px solid $blue-classic, 1.3rem, $white, $blue-classic);
+            }
+        }
+    
+        .design {
+            @include square ($livingcoral, $white, 1rem, none);
+            display: flex;
+            flex-direction: column;
+            line-height: 0.8;
+    
+            @media only screen and (max-width: $tablet) {
+                margin: 1rem 0 0 0;
+                transform: scale(0.9);
+                
+            }
+    
+            &:hover {
+                @include square-hover (none, 1.2rem);
+            }
+            &:active {
+                @include square-active (10px solid $livingcoral, 1.2rem, $white, $livingcoral);
+            }
+        }
+    }
+
+    #myname {
+        font-family: 'Alcubierre', sans-serif;
+        font-size: 4rem;
+        font-weight: lighter;
+        text-transform: uppercase;
+        color: $blue-classic;
+        position: relative;
+        top: -165px;
+
+        @media only screen and (min-width: 620px) and (max-width: $tablet) {
+            font-size: 3.2rem;
+            bottom: 12%;
+        }
+        @media only screen and (min-width: $smartphone) and (max-width: 620px) {
+            font-size: 2.3rem;
+            bottom: 12%;
+        }
+        @media only screen and (min-width: 420px) and (max-width: $smartphone) {
+            font-size: 2.3rem;
+            bottom: 12%;
+        }
+        @media only screen and (max-width: 420px) {
+            font-size: 2rem;
+            bottom: 12%;
+        }
+    }
+
+    #portfolio {
+        font-family: 'Chivo', serif;
+        font-size: 1.5rem;
+        font-weight: lighter;
+        text-transform: lowercase;
+        color: $blue-classic;
+        position: relative;
+        top: -150px;
+
+        @media only screen and (max-width: $tablet) {
+            font-size: 1rem;
+            bottom: 8%;
+        }
+    }
+}
+
+
+// BANNER -------------------------------------------
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    background-color: $blue-classic;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: $white;
+    z-index: 2;
+
+    .contacto {
+
+        h2 {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: lighter;
+            text-transform: lowercase;
+            line-height: 2;
+            font-size: 1.2rem;
+
+            @media only screen and (max-width: $tablet) {
+                font-size: 1rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "Alcubierre";
+  src: url("/resources/fonts/Alcubierre.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-size: 16px;
+}
+
+body a {
+  text-decoration: none;
+}

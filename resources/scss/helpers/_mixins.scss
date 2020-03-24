@@ -1,0 +1,46 @@
+@mixin square ($bg-color, $color, $font-size, $border) {
+    width: 150px;
+    height: 150px;
+    padding: 1rem;
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: lighter;
+    background-color: $bg-color;
+    color: $color;
+    font-size: $font-size;
+    border: $border;
+
+}
+
+@mixin square-hover ($border, $font-size) {
+    width: 180px;
+    height: 180px;
+    padding: 0.5rem;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: $font-size;
+    border: $border;
+    transition: width, height, font-size, font-weight;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+
+@mixin square-active ($border, $font-size, $bg-color, $color) {
+    width: 180px;
+    height: 180px;
+    padding: 0;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: $font-size;
+    border: $border;
+    background-color: $bg-color;
+    color: $color;
+    transition: font-size, border, background-color, color;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in-out;
+}
+
+//transition: width 0.3s ease-in-out, height 0.3s ease-in-out, font-size 0.3s ease-in-out;
+// font-size 0.1s ease-in-out, border 0.1s ease-in-out, background-color 0.1s ease-in-out, color 0.1s ease-in-out;

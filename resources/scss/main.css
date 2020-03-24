@@ -1,0 +1,191 @@
+@font-face {
+  font-family: "Alcubierre";
+  src: url("/resources/fonts/Alcubierre.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-size: 16px;
+}
+
+body a {
+  text-decoration: none;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  background-color: #004680;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header .container {
+  display: inline-flex;
+  justify-content: center;
+}
+
+header h2 {
+  font-family: 'Chivo', sans-serif;
+}
+
+header .cv {
+  width: 150px;
+  height: 150px;
+  padding: 1rem;
+  margin: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: lighter;
+  background-color: #004680;
+  color: #ffffff;
+  font-size: 1.5rem;
+  border: 6px solid #ffffff;
+}
+
+header .cv h2 {
+  text-transform: uppercase;
+}
+
+header .cv:hover {
+  width: 180px;
+  height: 180px;
+  padding: 0.5rem;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 2rem;
+  border: 10px solid #ffffff;
+  transition: width, height, font-size, font-weight;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+header .cv:active {
+  width: 180px;
+  height: 180px;
+  padding: 0;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 2rem;
+  border: 10px solid #F1F0E2;
+  background-color: #F1F0E2;
+  color: #004680;
+  transition: font-size, border, background-color, color;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in-out;
+}
+
+header .architecture {
+  width: 150px;
+  height: 150px;
+  padding: 1rem;
+  margin: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: lighter;
+  background-color: #ffffff;
+  color: #004680;
+  font-size: 1rem;
+  border: none;
+}
+
+header .architecture:hover {
+  width: 180px;
+  height: 180px;
+  padding: 0.5rem;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.3rem;
+  border: none;
+  transition: width, height, font-size, font-weight;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+header .architecture:active {
+  width: 180px;
+  height: 180px;
+  padding: 0;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.3rem;
+  border: 10px solid #F1F0E2;
+  background-color: #004680;
+  color: #F1F0E2;
+  transition: font-size, border, background-color, color;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in-out;
+}
+
+header .design {
+  width: 150px;
+  height: 150px;
+  padding: 1rem;
+  margin: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: lighter;
+  background-color: #FF6F61;
+  color: #ffffff;
+  font-size: 1rem;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  line-height: 0.8;
+}
+
+header .design:hover {
+  width: 180px;
+  height: 180px;
+  padding: 0.5rem;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border: none;
+  transition: width, height, font-size, font-weight;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+header .design:active {
+  width: 180px;
+  height: 180px;
+  padding: 0;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border: 10px solid #FF6F61;
+  background-color: #F1F0E2;
+  color: #FF6F61;
+  transition: font-size, border, background-color, color;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in-out;
+}
+
+header #myname {
+  font-family: 'Alcubierre', sans-serif;
+  font-size: 4rem;
+  font-weight: lighter;
+  text-transform: uppercase;
+  color: #ffffff;
+  position: fixed;
+  align-self: center;
+  bottom: 15%;
+}
+
+header #portfolio {
+  font-family: 'Chivo', serif;
+  font-size: 1.5rem;
+  font-weight: lighter;
+  text-transform: lowercase;
+  color: #F1F0E2;
+  position: fixed;
+  align-self: center;
+  bottom: 9%;
+}

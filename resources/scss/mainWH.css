@@ -1,0 +1,291 @@
+@font-face {
+  font-family: "Alcubierre";
+  src: url("/resources/fonts/Alcubierre.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-size: 16px;
+}
+
+body a {
+  text-decoration: none;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+}
+
+header .container {
+  width: 100%;
+  height: 100vh;
+  background-color: #ffffff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+  header .container {
+    justify-content: start;
+  }
+}
+
+header .container .squares {
+  display: inline-flex;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+  header .container .squares {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+header .container h2 {
+  font-family: 'Open Sans', sans-serif;
+}
+
+header .container .cv {
+  width: 150px;
+  height: 150px;
+  padding: 1rem;
+  margin: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: lighter;
+  background-color: #ffffff;
+  color: #004680;
+  font-size: 1.5rem;
+  border: 6px solid #004680;
+}
+
+@media only screen and (max-width: 768px) {
+  header .container .cv {
+    margin: 3rem 0 0 0;
+    transform: scale(0.9);
+  }
+}
+
+header .container .cv h2 {
+  text-transform: uppercase;
+}
+
+header .container .cv:hover {
+  width: 180px;
+  height: 180px;
+  padding: 0.5rem;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 2rem;
+  border: 10px solid #004680;
+  transition: width, height, font-size, font-weight;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+header .container .cv:active {
+  width: 180px;
+  height: 180px;
+  padding: 0;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 2rem;
+  border: 10px solid #004680;
+  background-color: #004680;
+  color: #F1F0E2;
+  transition: font-size, border, background-color, color;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in-out;
+}
+
+header .container .architecture {
+  width: 150px;
+  height: 150px;
+  padding: 1rem;
+  margin: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: lighter;
+  background-color: #004680;
+  color: #ffffff;
+  font-size: 1rem;
+  border: none;
+}
+
+@media only screen and (max-width: 768px) {
+  header .container .architecture {
+    margin: 1rem 0 0 0;
+    transform: scale(0.9);
+  }
+}
+
+header .container .architecture:hover {
+  width: 180px;
+  height: 180px;
+  padding: 0.5rem;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.3rem;
+  border: none;
+  transition: width, height, font-size, font-weight;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+header .container .architecture:active {
+  width: 180px;
+  height: 180px;
+  padding: 0;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.3rem;
+  border: 10px solid #004680;
+  background-color: #ffffff;
+  color: #004680;
+  transition: font-size, border, background-color, color;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in-out;
+}
+
+header .container .design {
+  width: 150px;
+  height: 150px;
+  padding: 1rem;
+  margin: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: lighter;
+  background-color: #FF6F61;
+  color: #ffffff;
+  font-size: 1rem;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  line-height: 0.8;
+}
+
+@media only screen and (max-width: 768px) {
+  header .container .design {
+    margin: 1rem 0 0 0;
+    transform: scale(0.9);
+  }
+}
+
+header .container .design:hover {
+  width: 180px;
+  height: 180px;
+  padding: 0.5rem;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border: none;
+  transition: width, height, font-size, font-weight;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+header .container .design:active {
+  width: 180px;
+  height: 180px;
+  padding: 0;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border: 10px solid #FF6F61;
+  background-color: #ffffff;
+  color: #FF6F61;
+  transition: font-size, border, background-color, color;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in-out;
+}
+
+header #myname {
+  font-family: 'Alcubierre', sans-serif;
+  font-size: 4rem;
+  font-weight: lighter;
+  text-transform: uppercase;
+  color: #004680;
+  position: relative;
+  top: -165px;
+}
+
+@media only screen and (min-width: 620px) and (max-width: 768px) {
+  header #myname {
+    font-size: 3.2rem;
+    bottom: 12%;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 620px) {
+  header #myname {
+    font-size: 2.3rem;
+    bottom: 12%;
+  }
+}
+
+@media only screen and (min-width: 420px) and (max-width: 480px) {
+  header #myname {
+    font-size: 2.3rem;
+    bottom: 12%;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  header #myname {
+    font-size: 2rem;
+    bottom: 12%;
+  }
+}
+
+header #portfolio {
+  font-family: 'Chivo', serif;
+  font-size: 1.5rem;
+  font-weight: lighter;
+  text-transform: lowercase;
+  color: #004680;
+  position: relative;
+  top: -150px;
+}
+
+@media only screen and (max-width: 768px) {
+  header #portfolio {
+    font-size: 1rem;
+    bottom: 8%;
+  }
+}
+
+.banner {
+  width: 100%;
+  height: 100vh;
+  background-color: #004680;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #ffffff;
+  z-index: 2;
+}
+
+.banner .contacto h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: lighter;
+  text-transform: lowercase;
+  line-height: 2;
+  font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .banner .contacto h2 {
+    font-size: 1rem;
+  }
+}

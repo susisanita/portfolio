@@ -1,0 +1,16 @@
+@import "helpers/variables";
+@import "helpers/fonts";
+@import "helpers/placeholders";
+@import "helpers/mixins";
+
+// GENERAL -------------------------------------------
+body {
+    font-size: 16px;
+
+    a {
+        text-decoration: none;
+    }
+}
+
+// HEADER -------------------------------------------
+// Navbar ----------------
