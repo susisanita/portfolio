@@ -9,6 +9,7 @@ body {
 
     a {
         text-decoration: none;
+        color: $white;
     }
 }
 
@@ -53,7 +54,7 @@ header {
     
             @media only screen and (max-width: $tablet) {
                 margin: 3rem 0 0 0;
-                transform: scale(0.9);
+                transform: scale(0.8);
             }
             
             h2 {

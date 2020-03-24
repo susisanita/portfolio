@@ -5,38 +5,38 @@
   font-style: normal;
 }
 
-header #index a, header ul li a {
+.navbar ul li a {
   font-family: 'Open sans', sans-serif;
   font-size: 1rem;
   padding: 0.5rem 1rem;
-  line-height: 1.2;
+  line-height: 1.3;
 }
 
-header #link-cv a {
+.navbar #link-cv a {
   color: #ffffff;
   font-weight: bold;
 }
 
-header #link-cv a:hover {
+.navbar #link-cv a:hover {
   font-weight: bold;
   font-size: 1.1rem;
 }
 
-header #link-cv a:active {
+.navbar #link-cv a:active {
   color: #FF6F61;
 }
 
-header #index a, header #link-graph a, header #link-arch a {
+.navbar #link-graph a, .navbar #link-arch a {
   color: #F1F0E2;
   border: none;
   font-weight: lighter;
 }
 
-header #index a:hover, header #link-graph a:hover, header #link-arch a:hover {
+.navbar #link-graph a:hover, .navbar #link-arch a:hover {
   font-weight: normal;
 }
 
-header #index a:active, header #link-graph a:active, header #link-arch a:active {
+.navbar #link-graph a:active, .navbar #link-arch a:active {
   color: #FF6F61;
 }
 
@@ -48,25 +48,32 @@ body a {
   text-decoration: none;
 }
 
-header {
+.navbar {
   width: 100%;
   height: 70px;
   z-index: 10;
   position: static;
   background-color: #004680;
-  display: inline-flex;
+  display: flex;
   padding: 0 1.5rem;
 }
 
-@media only screen and (max-width: 720px) {
-  header {
+@media only screen and (min-width: 500px) and (max-width: 720px) {
+  .navbar {
     height: auto;
-    padding: 0.5rem 1rem 1rem 1rem;
-    flex-direction: column;
+    min-height: 70px;
+    padding: 0 1rem;
   }
 }
 
-header ul {
+@media only screen and (max-width: 500px) {
+  .navbar {
+    justify-content: space-between;
+    padding-right: 0;
+  }
+}
+
+.navbar ul {
   width: 100%;
   height: 70px;
   display: inline-flex;
@@ -74,58 +81,88 @@ header ul {
   align-items: center;
 }
 
-@media only screen and (max-width: 720px) {
-  header ul {
+@media only screen and (min-width: 500px) and (max-width: 720px) {
+  .navbar ul {
     height: auto;
-    margin-top: 0.5rem;
-    justify-content: space-between;
+    display: flex;
+    justify-content: space-around;
   }
 }
 
-header ul li a {
+@media only screen and (max-width: 500px) {
+  .navbar ul {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+
+.navbar ul li a {
   text-transform: lowercase;
   text-align: center;
-  margin: 0.5rem 1.5rem;
+  margin: 0 1.5rem;
 }
 
 @media only screen and (max-width: 720px) {
-  header ul li a {
-    margin: 0.5rem;
+  .navbar ul li a {
+    margin: 0 0.5rem;
     padding: 0.5rem;
   }
 }
 
-header #link-graph {
+@media only screen and (max-width: 500px) {
+  .navbar ul li a {
+    transform: scale(0.9);
+    margin: 0 0.3rem;
+  }
+}
+
+.navbar #link-graph {
   text-align: center;
 }
 
-@media only screen and (max-width: 480px) {
-  header #link-graph #graph1 {
+@media only screen and (max-width: 500px) {
+  .navbar #link-graph #graph1 {
     display: none;
   }
 }
 
-header #link-graph #graph2 {
+.navbar #link-graph #graph2 {
   display: none;
 }
 
-@media only screen and (max-width: 480px) {
-  header #link-graph #graph2 {
+@media only screen and (max-width: 500px) {
+  .navbar #link-graph #graph2 {
     display: block;
   }
 }
 
-header #index {
+.navbar #index {
   display: inline-flex;
   align-items: center;
 }
 
 @media only screen and (max-width: 720px) {
-  header #index {
+  .navbar #index {
     justify-content: center;
   }
 }
 
-header #index a {
-  text-transform: uppercase;
+.navbar #index i {
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  color: #F1F0E2;
+}
+
+@media only screen and (max-width: 500px) {
+  .navbar #index i {
+    padding: 0.5rem 1rem 0.5rem 0;
+  }
+}
+
+.navbar #index i:hover {
+  font-size: 1.3rem;
+}
+
+.navbar #index i:active {
+  color: #FF6F61;
 }

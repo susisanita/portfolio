@@ -14,19 +14,23 @@ body {
 
 // HEADER -------------------------------------------
 // Navbar ----------------
-header {
+.navbar {
     width: 100%;
     height: 70px;
     z-index: 10;
     position: static;
     background-color: $blue-classic;
-    display: inline-flex;
+    display: flex;
     padding: 0 1.5rem;
 
-    @media only screen and (max-width: 720px) {
+    @media only screen and (min-width: 500px) and (max-width: 720px) {
         height: auto;
-        padding: 0.5rem 1rem 1rem 1rem;
-        flex-direction: column;
+        min-height: 70px;
+        padding: 0 1rem;
+    }
+    @media only screen and (max-width: 500px) {
+        justify-content: space-between;
+        padding-right: 0; 
     }
 
     ul {
@@ -36,26 +40,33 @@ header {
         justify-content: center;
         align-items: center;
 
-        @media only screen and (max-width: 720px) {
+        @media only screen and (min-width: 500px) and (max-width: 720px) {
             height: auto;
-            margin-top: 0.5rem;
-            justify-content: space-between;
-            
+            display: flex;
+            justify-content: space-around; 
+        }
+        @media only screen and (max-width: 500px) {
+            // transform: scale(0.9);
+            display: flex;
+            justify-content: space-evenly; 
         }
 
         li {
-            
             a {
                 @extend %nav-link;
                 text-transform: lowercase;
                 text-align: center;
-                margin: 0.5rem 1.5rem;
+                margin: 0 1.5rem;
 
                 @media only screen and (max-width: 720px) {
-                    margin: 0.5rem;
+                    margin: 0 0.5rem;
                     padding: 0.5rem;
                 }
 
+                @media only screen and (max-width: 500px) {
+                    transform: scale(0.9);
+                    margin: 0 0.3rem;
+                }
             }
         }
     }
@@ -98,15 +109,16 @@ header {
                 @extend %non-selected-active;
             }
         }
+
         #graph1 {
-            @media only screen and (max-width: $smartphone) {
+            @media only screen and (max-width: 500px) {
                 display: none;
             }
         }
 
         #graph2 {
             display: none;
-            @media only screen and (max-width: $smartphone) {
+            @media only screen and (max-width: 500px) {
                 display: block;
             }
         }
@@ -120,16 +132,20 @@ header {
             justify-content: center;
         }
 
-        a {
-            @extend %nav-link;
-            @extend %non-selected;
-            text-transform: uppercase;
+        i {
+            font-size: 1.2rem;
+            padding: 0.5rem 1rem;
+            color: $cream;
+
+            @media only screen and (max-width: 500px) {
+                padding: 0.5rem 1rem 0.5rem 0; 
+            }
 
             &:hover {
-                @extend %non-selected-hover;
+                font-size: 1.3rem;
             }
             &:active {
-                @extend %non-selected-active;
+                color: $livingcoral;
             }
         }
     }

@@ -11,6 +11,7 @@ body {
 
 body a {
   text-decoration: none;
+  color: #ffffff;
 }
 
 header {
@@ -70,7 +71,7 @@ header .container .cv {
 @media only screen and (max-width: 768px) {
   header .container .cv {
     margin: 3rem 0 0 0;
-    transform: scale(0.9);
+    transform: scale(0.8);
   }
 }
 
