@@ -41,7 +41,7 @@ header {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                transform: scale(0.9);
+                transform: scale(0.8);
             }
         }
     
@@ -54,7 +54,7 @@ header {
             @include square ($white, $blue-classic, 1.5rem, 6px solid $blue-classic);
     
             @media only screen and (max-width: $tablet) {
-                margin: 2rem 0 0 0;
+                margin: 0;
                 // transform: scale(0.8);
             }
             
@@ -107,7 +107,7 @@ header {
     }
 
     #myname {
-        font-family: 'Alcubierre', sans-serif;
+        font-family: 'Alcubierre', 'Open Sans', sans-serif;
         font-size: 4rem;
         font-weight: lighter;
         text-transform: uppercase;
@@ -117,19 +117,19 @@ header {
 
         @media only screen and (min-width: 620px) and (max-width: $tablet) {
             font-size: 3.2rem;
-            top: -100px;
+            top: -110px;
         }
         @media only screen and (min-width: $smartphone) and (max-width: 620px) {
             font-size: 2.3rem;
-            top: -100px;
+            top: -110px;
         }
         @media only screen and (min-width: 420px) and (max-width: $smartphone) {
             font-size: 2.3rem;
-            top: -100px;
+            top: -110px;
         }
         @media only screen and (max-width: 420px) {
             font-size: 2rem;
-            top: -100px;
+            top: -110px;
         }
     }
 
@@ -144,7 +144,7 @@ header {
 
         @media only screen and (max-width: $tablet) {
             font-size: 1rem;
-            top: -90px;
+            top: -100px;
         }
     }
 }

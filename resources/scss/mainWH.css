@@ -46,7 +46,7 @@ header .container .squares {
     display: flex;
     flex-direction: column;
     align-items: center;
-    transform: scale(0.9);
+    transform: scale(0.8);
   }
 }
 
@@ -71,7 +71,7 @@ header .container .cv {
 
 @media only screen and (max-width: 768px) {
   header .container .cv {
-    margin: 2rem 0 0 0;
+    margin: 0;
   }
 }
 
@@ -209,7 +209,7 @@ header .container .design:active {
 }
 
 header #myname {
-  font-family: 'Alcubierre', sans-serif;
+  font-family: 'Alcubierre', 'Open Sans', sans-serif;
   font-size: 4rem;
   font-weight: lighter;
   text-transform: uppercase;
@@ -221,28 +221,28 @@ header #myname {
 @media only screen and (min-width: 620px) and (max-width: 768px) {
   header #myname {
     font-size: 3.2rem;
-    top: -100px;
+    top: -110px;
   }
 }
 
 @media only screen and (min-width: 480px) and (max-width: 620px) {
   header #myname {
     font-size: 2.3rem;
-    top: -100px;
+    top: -110px;
   }
 }
 
 @media only screen and (min-width: 420px) and (max-width: 480px) {
   header #myname {
     font-size: 2.3rem;
-    top: -100px;
+    top: -110px;
   }
 }
 
 @media only screen and (max-width: 420px) {
   header #myname {
     font-size: 2rem;
-    top: -100px;
+    top: -110px;
   }
 }
 
@@ -259,7 +259,7 @@ header #portfolio {
 @media only screen and (max-width: 768px) {
   header #portfolio {
     font-size: 1rem;
-    top: -90px;
+    top: -100px;
   }
 }
 
