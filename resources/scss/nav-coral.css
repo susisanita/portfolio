@@ -1,0 +1,164 @@
+@font-face {
+  font-family: "Alcubierre";
+  src: url("/resources/fonts/Alcubierre.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.navbar ul li a {
+  font-family: 'Open sans', sans-serif;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.navbar #link-selected a {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.navbar #link-selected a:hover {
+  font-weight: bold;
+}
+
+.navbar #link-non-selected a {
+  color: #F1F0E2;
+  border: none;
+  font-weight: lighter;
+}
+
+.navbar #link-non-selected a:hover {
+  font-weight: normal;
+}
+
+body {
+  font-size: 16px;
+}
+
+body a {
+  text-decoration: none;
+}
+
+.navbar {
+  width: 100%;
+  height: 70px;
+  z-index: 10;
+  position: static;
+  background-color: #FF6F61;
+  display: flex;
+  padding: 0 1.5rem;
+}
+
+@media only screen and (min-width: 500px) and (max-width: 720px) {
+  .navbar {
+    height: auto;
+    min-height: 70px;
+    padding: 0 1rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .navbar {
+    justify-content: space-between;
+    padding-right: 0;
+  }
+}
+
+.navbar ul {
+  width: 100%;
+  height: 70px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (min-width: 500px) and (max-width: 720px) {
+  .navbar ul {
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .navbar ul {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+
+.navbar ul li a {
+  text-transform: lowercase;
+  text-align: center;
+  margin: 0 1.5rem;
+}
+
+@media only screen and (max-width: 720px) {
+  .navbar ul li a {
+    margin: 0 0.5rem;
+    padding: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .navbar ul li a {
+    transform: scale(0.9);
+    margin: 0 0.3rem;
+  }
+}
+
+.navbar #link-selected a:active {
+  color: #004680;
+}
+
+.navbar #link-non-selected a:active {
+  color: #004680;
+}
+
+@media only screen and (max-width: 500px) {
+  .navbar #graph1 {
+    display: none;
+  }
+}
+
+.navbar #graph2 {
+  display: none;
+}
+
+@media only screen and (max-width: 500px) {
+  .navbar #graph2 {
+    display: block;
+  }
+}
+
+.navbar #index {
+  display: inline-flex;
+  align-items: center;
+}
+
+@media only screen and (max-width: 720px) {
+  .navbar #index {
+    justify-content: center;
+  }
+}
+
+.navbar #index i {
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  color: #F1F0E2;
+}
+
+@media only screen and (max-width: 500px) {
+  .navbar #index i {
+    padding: 0.5rem 1rem 0.5rem 0;
+  }
+}
+
+.navbar #index i:hover {
+  font-size: 1.3rem;
+}
+
+.navbar #index i:active {
+  color: #004680;
+}

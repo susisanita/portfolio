@@ -22,10 +22,6 @@
   font-weight: bold;
 }
 
-.navbar #link-selected a:active {
-  color: #FF6F61;
-}
-
 .navbar #link-non-selected a {
   color: #F1F0E2;
   border: none;
@@ -34,10 +30,6 @@
 
 .navbar #link-non-selected a:hover {
   font-weight: normal;
-}
-
-.navbar #link-non-selected a:active {
-  color: #FF6F61;
 }
 
 body {
@@ -114,6 +106,14 @@ body a {
     transform: scale(0.9);
     margin: 0 0.3rem;
   }
+}
+
+.navbar #link-selected a:active {
+  color: #FF6F61;
+}
+
+.navbar #link-non-selected a:active {
+  color: #FF6F61;
 }
 
 @media only screen and (max-width: 500px) {

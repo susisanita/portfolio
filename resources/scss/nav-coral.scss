@@ -1,0 +1,139 @@
+@import "helpers/variables";
+@import "helpers/fonts";
+@import "helpers/placeholders";
+@import "helpers/mixins";
+
+// GENERAL -------------------------------------------
+body {
+    font-size: 16px;
+
+    a {
+        text-decoration: none;
+    }
+}
+
+// HEADER -------------------------------------------
+// Navbar ----------------
+.navbar {
+    width: 100%;
+    height: 70px;
+    z-index: 10;
+    position: static;
+    background-color: $livingcoral;
+    display: flex;
+    padding: 0 1.5rem;
+
+    @media only screen and (min-width: 500px) and (max-width: 720px) {
+        height: auto;
+        min-height: 70px;
+        padding: 0 1rem;
+    }
+    @media only screen and (max-width: 500px) {
+        justify-content: space-between;
+        padding-right: 0; 
+    }
+
+    ul {
+        width: 100%;
+        height: 70px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+
+        @media only screen and (min-width: 500px) and (max-width: 720px) {
+            height: auto;
+            display: flex;
+            justify-content: space-around; 
+        }
+        @media only screen and (max-width: 500px) {
+            // transform: scale(0.9);
+            display: flex;
+            justify-content: space-evenly; 
+        }
+
+        li {
+            a {
+                @extend %nav-link;
+                text-transform: lowercase;
+                text-align: center;
+                margin: 0 1.5rem;
+
+                @media only screen and (max-width: 720px) {
+                    margin: 0 0.5rem;
+                    padding: 0.5rem;
+                }
+
+                @media only screen and (max-width: 500px) {
+                    transform: scale(0.9);
+                    margin: 0 0.3rem;
+                }
+            }
+        }
+    }
+    
+    #link-selected {
+        a {
+            @extend %selected;
+
+            &:hover {
+                @extend %selected-hover;
+            }
+            &:active {
+                color: $blue-classic;
+            }
+        }
+    }
+
+    #link-non-selected {
+        a {
+            @extend %non-selected;
+
+            &:hover {
+                @extend %non-selected-hover;
+            }
+            &:active {
+                color: $blue-classic;
+            }
+        }
+    }
+
+
+    #graph1 {
+        @media only screen and (max-width: 500px) {
+            display: none;
+        }
+    }
+
+    #graph2 {
+        display: none;
+        @media only screen and (max-width: 500px) {
+            display: block;
+        }
+    }
+
+    #index {
+        display: inline-flex;
+        align-items: center;
+
+        @media only screen and (max-width: 720px) {
+            justify-content: center;
+        }
+
+        i {
+            font-size: 1.2rem;
+            padding: 0.5rem 1rem;
+            color: $cream;
+
+            @media only screen and (max-width: 500px) {
+                padding: 0.5rem 1rem 0.5rem 0; 
+            }
+
+            &:hover {
+                font-size: 1.3rem;
+            }
+            &:active {
+                color: $blue-classic;
+            }
+        }
+    }
+}
