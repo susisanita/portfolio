@@ -21,10 +21,20 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    
+    @media only screen and (max-width: $tablet) {
+        justify-content: start;
+    }
 
     .container {
         display: inline-flex;
         justify-content: center;
+
+        @media only screen and (max-width: $tablet) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     h2 {
@@ -34,6 +44,11 @@ header {
 
     .cv {
         @include square ($blue-classic, $white, 1.5rem, 6px solid $white);
+
+        @media only screen and (max-width: $tablet) {
+            margin: 3rem 0 0 0;
+            transform: scale(0.9);
+        }
         
         h2 {
             text-transform: uppercase;
@@ -50,6 +65,11 @@ header {
     .architecture {
         @include square ($white, $blue-classic, 1rem, none);
 
+        @media only screen and (max-width: $tablet) {
+            margin: 1rem 0 0 0;
+            transform: scale(0.9);
+        }
+
         &:hover {
             @include square-hover (none, 1.3rem);
         }
@@ -63,6 +83,11 @@ header {
         display: flex;
         flex-direction: column;
         line-height: 0.8;
+
+        @media only screen and (max-width: $tablet) {
+            margin: 1rem 0 0 0;
+            transform: scale(0.9);   
+        }
 
         &:hover {
             @include square-hover (none, 1.2rem);
@@ -81,6 +106,23 @@ header {
         position: fixed;
         align-self: center;
         bottom: 15%;
+
+        @media only screen and (min-width: 620px) and (max-width: $tablet) {
+            font-size: 3.2rem;
+            bottom: 12%;
+        }
+        @media only screen and (min-width: $smartphone) and (max-width: 620px) {
+            font-size: 2.3rem;
+            bottom: 12%;
+        }
+        @media only screen and (min-width: 420px) and (max-width: $smartphone) {
+            font-size: 2.3rem;
+            bottom: 12%;
+        }
+        @media only screen and (max-width: 420px) {
+            font-size: 2rem;
+            bottom: 12%;
+        }
     }
 
     #portfolio {
@@ -92,6 +134,11 @@ header {
         position: fixed;
         align-self: center;
         bottom: 9%;
+
+        @media only screen and (max-width: $tablet) {
+            font-size: 1rem;
+            bottom: 8%;
+        }
     }
 }
 

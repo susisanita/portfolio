@@ -14,3 +14,123 @@ body {
 
 // HEADER -------------------------------------------
 // Navbar ----------------
+header {
+    width: 100%;
+    height: 70px;
+    z-index: 10;
+    position: static;
+    background-color: $blue-classic;
+    display: inline-flex;
+    padding: 0 1.5rem;
+
+    @media only screen and (max-width: 720px) {
+        height: auto;
+        padding: 0.5rem 1rem 1rem 1rem;
+        flex-direction: column;
+    }
+
+    ul {
+        width: 100%;
+        height: 70px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+
+        @media only screen and (max-width: 720px) {
+            height: auto;
+            margin-top: 0.5rem;
+            justify-content: space-between;
+            
+        }
+
+        li {
+            
+            a {
+                @extend %nav-link;
+                text-transform: lowercase;
+                text-align: center;
+                margin: 0.5rem 1.5rem;
+
+                @media only screen and (max-width: 720px) {
+                    margin: 0.5rem;
+                    padding: 0.5rem;
+                }
+
+            }
+        }
+    }
+    
+    #link-cv {
+        a {
+            @extend %selected;
+
+            &:hover {
+                @extend %selected-hover;
+            }
+            &:active {
+                @extend %selected-active;
+            }
+        }
+    }
+
+    #link-arch {
+        a {
+            @extend %non-selected;
+
+            &:hover {
+                @extend %non-selected-hover;
+            }
+            &:active {
+                @extend %non-selected-active;
+            }
+        }
+    }
+
+    #link-graph {
+        text-align: center;
+        a {
+            @extend %non-selected;
+
+            &:hover {
+                @extend %non-selected-hover;
+            }
+            &:active {
+                @extend %non-selected-active;
+            }
+        }
+        #graph1 {
+            @media only screen and (max-width: $smartphone) {
+                display: none;
+            }
+        }
+
+        #graph2 {
+            display: none;
+            @media only screen and (max-width: $smartphone) {
+                display: block;
+            }
+        }
+    }
+
+    #index {
+        display: inline-flex;
+        align-items: center;
+
+        @media only screen and (max-width: 720px) {
+            justify-content: center;
+        }
+
+        a {
+            @extend %nav-link;
+            @extend %non-selected;
+            text-transform: uppercase;
+
+            &:hover {
+                @extend %non-selected-hover;
+            }
+            &:active {
+                @extend %non-selected-active;
+            }
+        }
+    }
+}

@@ -23,9 +23,23 @@ header {
   justify-content: center;
 }
 
+@media only screen and (max-width: 768px) {
+  header {
+    justify-content: start;
+  }
+}
+
 header .container {
   display: inline-flex;
   justify-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+  header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 header h2 {
@@ -45,6 +59,13 @@ header .cv {
   color: #ffffff;
   font-size: 1.5rem;
   border: 6px solid #ffffff;
+}
+
+@media only screen and (max-width: 768px) {
+  header .cv {
+    margin: 3rem 0 0 0;
+    transform: scale(0.9);
+  }
 }
 
 header .cv h2 {
@@ -94,6 +115,13 @@ header .architecture {
   border: none;
 }
 
+@media only screen and (max-width: 768px) {
+  header .architecture {
+    margin: 1rem 0 0 0;
+    transform: scale(0.9);
+  }
+}
+
 header .architecture:hover {
   width: 180px;
   height: 180px;
@@ -140,6 +168,13 @@ header .design {
   line-height: 0.8;
 }
 
+@media only screen and (max-width: 768px) {
+  header .design {
+    margin: 1rem 0 0 0;
+    transform: scale(0.9);
+  }
+}
+
 header .design:hover {
   width: 180px;
   height: 180px;
@@ -179,6 +214,34 @@ header #myname {
   bottom: 15%;
 }
 
+@media only screen and (min-width: 620px) and (max-width: 768px) {
+  header #myname {
+    font-size: 3.2rem;
+    bottom: 12%;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 620px) {
+  header #myname {
+    font-size: 2.3rem;
+    bottom: 12%;
+  }
+}
+
+@media only screen and (min-width: 420px) and (max-width: 480px) {
+  header #myname {
+    font-size: 2.3rem;
+    bottom: 12%;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  header #myname {
+    font-size: 2rem;
+    bottom: 12%;
+  }
+}
+
 header #portfolio {
   font-family: 'Chivo', serif;
   font-size: 1.5rem;
@@ -188,4 +251,11 @@ header #portfolio {
   position: fixed;
   align-self: center;
   bottom: 9%;
+}
+
+@media only screen and (max-width: 768px) {
+  header #portfolio {
+    font-size: 1rem;
+    bottom: 8%;
+  }
 }
