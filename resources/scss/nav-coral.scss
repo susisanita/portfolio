@@ -15,13 +15,7 @@ body {
 // HEADER -------------------------------------------
 // Navbar ----------------
 .navbar {
-    width: 100%;
-    height: 70px;
-    z-index: 10;
-    position: static;
-    background-color: $livingcoral;
-    display: flex;
-    padding: 0 1.5rem;
+    @include navbar ($livingcoral)  // change color
 
     @media only screen and (min-width: 500px) and (max-width: 720px) {
         height: auto;
@@ -30,7 +24,7 @@ body {
     }
     @media only screen and (max-width: 500px) {
         justify-content: space-between;
-        padding-right: 0; 
+        padding-right: 0;
     }
 
     ul {
@@ -46,7 +40,6 @@ body {
             justify-content: space-around; 
         }
         @media only screen and (max-width: 500px) {
-            // transform: scale(0.9);
             display: flex;
             justify-content: space-evenly; 
         }
@@ -54,15 +47,11 @@ body {
         li {
             a {
                 @extend %nav-link;
-                text-transform: lowercase;
-                text-align: center;
-                margin: 0 1.5rem;
-
+                
                 @media only screen and (max-width: 720px) {
                     margin: 0 0.5rem;
                     padding: 0.5rem;
                 }
-
                 @media only screen and (max-width: 500px) {
                     transform: scale(0.9);
                     margin: 0 0.3rem;
@@ -73,26 +62,26 @@ body {
     
     #link-selected {
         a {
-            @extend %selected;
+            @include selected ($white);
 
-            &:hover {
-                @extend %selected-hover;
-            }
+            // &:hover {
+            //     @include selected-hover (bold);
+            // }
             &:active {
-                color: $blue-classic;
+                @include selected-active ($blue-classic); // change color
             }
         }
     }
 
     #link-non-selected {
         a {
-            @extend %non-selected;
+            @include non-selected ($cream);
 
             &:hover {
-                @extend %non-selected-hover;
+                @include non-selected-hover (normal);
             }
             &:active {
-                color: $blue-classic;
+                @include selected-active ($blue-classic); // change color
             }
         }
     }
@@ -122,7 +111,7 @@ body {
         i {
             font-size: 1.2rem;
             padding: 0.5rem 1rem;
-            color: $cream;
+            color: $white;
 
             @media only screen and (max-width: 500px) {
                 padding: 0.5rem 1rem 0.5rem 0; 
@@ -132,8 +121,36 @@ body {
                 font-size: 1.3rem;
             }
             &:active {
-                color: $blue-classic;
+                @include selected-active ($blue-classic); // change color
             }
+        }
+    }
+}
+
+
+// Menu Icon ----------------
+#menu-icon {
+    i {
+        font-size: 1.2rem;
+        color: $livingcoral; // change color
+        position: fixed;
+        margin: 1rem 0 0 2.2rem;
+        padding: 0.3rem;
+
+        @media only screen and (max-width: 720px) {
+            margin-left: 1.7rem;
+        }
+        @media only screen and (max-width: 500px) {
+            margin-left: 1.2rem;
+        }
+
+        &:hover {
+            font-size: 1.3rem;
+        }
+        &:active {
+            color: $white;
+            background-color: $livingcoral; // change color
+            border-radius: 7px;
         }
     }
 }

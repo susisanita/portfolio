@@ -1,3 +1,5 @@
+// MAIN -----------------------------------------------------------
+
 @mixin square ($bg-color, $color, $font-size, $border) {
     width: 150px;
     height: 150px;
@@ -42,5 +44,48 @@
     transition-timing-function: ease-in-out;
 }
 
-//transition: width 0.3s ease-in-out, height 0.3s ease-in-out, font-size 0.3s ease-in-out;
-// font-size 0.1s ease-in-out, border 0.1s ease-in-out, background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+// NAVBAR -----------------------------------------------------------
+
+@mixin navbar ($bg-color) {
+    width: 100%;
+    height: 70px;
+    z-index: 10;
+    position: fixed;
+    display: flex;
+    padding: 0 1.5rem;
+    background-color: $bg-color;
+}
+
+@mixin selected ($color: white) {
+    color: $color;
+    font-weight: bold;
+}
+
+@mixin selected-hover ($weight: bold) {
+    font-weight: $weight;
+}
+
+@mixin non-selected ($color: $cream) {
+    color: $color;
+    font-weight: lighter;
+}
+
+@mixin non-selected-hover ($weight: normal) {
+    font-weight: $weight;
+}
+
+@mixin selected-active ($color) {
+    color: $color;
+}
+
+@mixin texto-ppal ($color: $blue-depths, $font-size: 1rem) {
+    color: $color;
+    font-size: $font-size;
+    padding-top: 0.5rem;
+}
+
+@mixin texto-base ($color: $blue-depths, $font-size: 1rem) {
+    color: $color;
+    font-size: $font-size;
+    padding-left: 1.5rem;
+}

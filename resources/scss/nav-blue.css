@@ -11,25 +11,9 @@
   padding: 0.5rem 1rem;
   line-height: 1.3;
   text-align: center;
-}
-
-.navbar #link-selected a {
-  color: #ffffff;
-  font-weight: bold;
-}
-
-.navbar #link-selected a:hover {
-  font-weight: bold;
-}
-
-.navbar #link-non-selected a {
-  color: #F1F0E2;
-  border: none;
-  font-weight: lighter;
-}
-
-.navbar #link-non-selected a:hover {
-  font-weight: normal;
+  text-transform: lowercase;
+  text-align: center;
+  margin: 0 1.5rem;
 }
 
 body {
@@ -44,10 +28,10 @@ body a {
   width: 100%;
   height: 70px;
   z-index: 10;
-  position: static;
-  background-color: #004680;
+  position: fixed;
   display: flex;
   padding: 0 1.5rem;
+  background-color: #004680;
 }
 
 @media only screen and (min-width: 500px) and (max-width: 720px) {
@@ -88,12 +72,6 @@ body a {
   }
 }
 
-.navbar ul li a {
-  text-transform: lowercase;
-  text-align: center;
-  margin: 0 1.5rem;
-}
-
 @media only screen and (max-width: 720px) {
   .navbar ul li a {
     margin: 0 0.5rem;
@@ -108,8 +86,22 @@ body a {
   }
 }
 
+.navbar #link-selected a {
+  color: #ffffff;
+  font-weight: bold;
+}
+
 .navbar #link-selected a:active {
   color: #FF6F61;
+}
+
+.navbar #link-non-selected a {
+  color: #F1F0E2;
+  font-weight: lighter;
+}
+
+.navbar #link-non-selected a:hover {
+  font-weight: normal;
 }
 
 .navbar #link-non-selected a:active {
@@ -146,7 +138,7 @@ body a {
 .navbar #index i {
   font-size: 1.2rem;
   padding: 0.5rem 1rem;
-  color: #F1F0E2;
+  color: #ffffff;
 }
 
 @media only screen and (max-width: 500px) {
@@ -161,4 +153,232 @@ body a {
 
 .navbar #index i:active {
   color: #FF6F61;
+}
+
+#menu-icon i {
+  font-size: 1.2rem;
+  color: #004680;
+  position: fixed;
+  margin: 5.4rem 0 0 2.2rem;
+  padding: 0.3rem;
+}
+
+@media only screen and (max-width: 720px) {
+  #menu-icon i {
+    margin-left: 1.7rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #menu-icon i {
+    margin-left: 0.7rem;
+    font-size: 1rem;
+  }
+}
+
+#menu-icon i:hover {
+  font-size: 1.3rem;
+}
+
+@media only screen and (max-width: 500px) {
+  #menu-icon i:hover {
+    font-size: 1.1rem;
+  }
+}
+
+#menu-icon i:active {
+  color: #ffffff;
+  background-color: #004680;
+  border-radius: 7px;
+}
+
+#language-icon a {
+  color: #004680;
+  font-weight: lighter;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-family: 'Open Sans', sans-serif;
+  position: fixed;
+  right: 0;
+  margin: 5.4rem 2.2rem 0 0;
+  padding: 0.3rem;
+}
+
+@media only screen and (max-width: 720px) {
+  #language-icon a {
+    margin-right: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #language-icon a {
+    margin-right: .5rem;
+    font-size: 0.8rem;
+  }
+}
+
+#language-icon a:hover {
+  font-weight: normal;
+}
+
+#language-icon a:active {
+  font-weight: bold;
+}
+
+.content {
+  margin: 0 20% 100px 20%;
+  padding-top: 8.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Open Sans', sans-serif;
+  color: #004680;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .content {
+    margin: 0 10% 100px 10%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .content {
+    margin: 0 1rem 0 1rem;
+    transform: scale(0.8);
+    padding-top: 1rem;
+  }
+}
+
+.content h1 {
+  font-family: 'Aleo', serif;
+  background-color: #004680;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #ffffff;
+  font-weight: lighter;
+}
+
+.content h3 {
+  color: #263056;
+  font-size: 1rem;
+  padding-top: 0.5rem;
+  line-height: 1.8;
+  font-weight: bold;
+}
+
+.content h4 {
+  color: #263056;
+  font-size: 1rem;
+  padding-top: 0.5rem;
+  line-height: 1.5;
+  font-weight: normal;
+}
+
+.content h5 {
+  color: #263056;
+  font-size: 1rem;
+  padding-left: 1.5rem;
+  line-height: 1.5;
+  font-weight: normal;
+}
+
+.content p {
+  color: #263056;
+  font-size: 1rem;
+  padding-left: 1.5rem;
+  line-height: 1.2;
+  font-weight: lighter;
+}
+
+.content i {
+  color: #263056;
+  font-size: 0.9rem;
+  padding-top: 0.5rem;
+  padding-left: 1rem;
+}
+
+.content i:hover {
+  font-size: 1rem;
+}
+
+.content i:active {
+  color: #004680;
+}
+
+.content .cursive {
+  font-style: oblique;
+}
+
+.content .strong {
+  font-weight: normal;
+}
+
+.content .title {
+  width: 100%;
+  text-align: center;
+  padding: 3rem 0 1rem 0;
+}
+
+.content .cuerpo {
+  width: 100%;
+  text-align: justify;
+}
+
+.content .link {
+  display: flex;
+  align-items: center;
+}
+
+.content .work-exp {
+  padding-left: 0.8rem;
+}
+
+.content .work-exp p {
+  padding-top: 0.3rem;
+}
+
+.content .work-exp h4 {
+  padding-top: 0.3rem;
+}
+
+.content .img-container {
+  width: 25%;
+  height: auto;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 480px) {
+  .content .img-container {
+    width: 60%;
+  }
+}
+
+.content .img-container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.content .datos {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 2rem 0 1rem 0;
+  line-height: 1.5;
+}
+
+.content .datos .name {
+  font-weight: bold;
+  font-size: 1.2rem;
+  line-height: 2;
+}
+
+.content .datos .mail {
+  font-weight: normal;
+  font-size: 1rem;
+}
+
+.content .datos .born {
+  font-size: .8rem;
+  line-height: 2;
 }

@@ -1,34 +1,15 @@
 @import "./variables";
 
+// NAVBAR --------------------
+
 %nav-link {
     font-family: 'Open sans', sans-serif;
     font-size: 1rem;
     padding: 0.5rem 1rem;
     line-height: 1.3;
     text-align: center;
+    text-transform: lowercase;
+    text-align: center;
+    margin: 0 1.5rem;
 }
 
-%selected {
-    color: $white;
-    font-weight: bold;
-    // font-size: 1.2rem;
-    // border: 2px solid $white;
-}
-
-%selected-hover {
-    font-weight: bold;
-    // font-size: 1.1rem;
-    // border: 4px solid $white;
-}
-
-%non-selected {
-    color: $cream;
-    // font-size: 1rem;
-    border: none;
-    font-weight: lighter;
-}
-
-%non-selected-hover {
-    font-weight: normal;
-    // font-size: 1rem;
-}

@@ -15,13 +15,7 @@ body {
 // HEADER -------------------------------------------
 // Navbar ----------------
 .navbar {
-    width: 100%;
-    height: 70px;
-    z-index: 10;
-    position: static;
-    background-color: $blue-classic;
-    display: flex;
-    padding: 0 1.5rem;
+    @include navbar ($blue-classic);   // change color
 
     @media only screen and (min-width: 500px) and (max-width: 720px) {
         height: auto;
@@ -46,7 +40,6 @@ body {
             justify-content: space-around; 
         }
         @media only screen and (max-width: 500px) {
-            // transform: scale(0.9);
             display: flex;
             justify-content: space-evenly; 
         }
@@ -54,15 +47,11 @@ body {
         li {
             a {
                 @extend %nav-link;
-                text-transform: lowercase;
-                text-align: center;
-                margin: 0 1.5rem;
-
+                
                 @media only screen and (max-width: 720px) {
                     margin: 0 0.5rem;
                     padding: 0.5rem;
                 }
-
                 @media only screen and (max-width: 500px) {
                     transform: scale(0.9);
                     margin: 0 0.3rem;
@@ -73,26 +62,26 @@ body {
     
     #link-selected {
         a {
-            @extend %selected;
+            @include selected ($white);
 
-            &:hover {
-                @extend %selected-hover;
-            }
+            // &:hover {
+            //     @include selected-hover (bold);
+            // }
             &:active {
-                color: $livingcoral;
+                @include selected-active ($livingcoral); // change color
             }
         }
     }
 
     #link-non-selected {
         a {
-            @extend %non-selected;
+            @include non-selected ($cream);
 
             &:hover {
-                @extend %non-selected-hover;
+                @include non-selected-hover (normal);
             }
             &:active {
-                color: $livingcoral;
+                @include selected-active ($livingcoral); // change color
             }
         }
     }
@@ -122,7 +111,7 @@ body {
         i {
             font-size: 1.2rem;
             padding: 0.5rem 1rem;
-            color: $cream;
+            color: $white;
 
             @media only screen and (max-width: 500px) {
                 padding: 0.5rem 1rem 0.5rem 0; 
@@ -132,8 +121,212 @@ body {
                 font-size: 1.3rem;
             }
             &:active {
-                color: $livingcoral;
+                @include selected-active ($livingcoral); // change color
             }
         }
     }
+}
+
+
+// Menu Icon ----------------
+#menu-icon {
+    i {
+        font-size: 1.2rem;
+        color: $blue-classic; // change color
+        position: fixed;
+        margin: 5.4rem 0 0 2.2rem; // margin-top 70px + 1rem (por navbar)
+        padding: 0.3rem;
+
+        @media only screen and (max-width: 720px) {
+            margin-left: 1.7rem;
+        }
+        @media only screen and (max-width: 500px) {
+            margin-left: 0.7rem;
+            font-size: 1rem;
+        }
+
+        &:hover {
+            font-size: 1.3rem;
+
+            @media only screen and (max-width: 500px) {
+                font-size: 1.1rem;
+            }
+        }
+        &:active {
+            color: $white;
+            background-color: $blue-classic; // change color
+            border-radius: 7px;
+        }
+    }
+}
+// Laguage Icon ----------------
+#language-icon {
+    a {
+        color: $blue-classic;
+        font-weight: lighter;
+        font-size: 1rem;
+        text-transform: uppercase;
+        font-family: 'Open Sans', sans-serif;
+        position: fixed;
+        right: 0;
+        margin: 5.4rem 2.2rem 0 0; // margin-top 70px + 1rem (por navbar)
+        padding: 0.3rem;
+
+        @media only screen and (max-width: 720px) {
+            margin-right: 1.5rem;
+        }
+        @media only screen and (max-width: 500px) {
+            margin-right: .5rem;
+            font-size: 0.8rem;
+        }
+
+        &:hover {
+            font-weight: normal;
+        }
+        &:active {
+            font-weight: bold;
+        }
+    }
+}
+
+// CONTENT -------------------------------------------
+.content {
+    margin: 0 20% 100px 20%; 
+    padding-top: 8.4rem; // padding-top 70px + 4rem (por navbar)
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+    color: $blue-classic;
+
+    @media only screen and (min-width: $tablet) and (max-width: 1100px) {
+        margin: 0 10% 100px 10%;
+    }
+    @media only screen and (max-width: $tablet) {
+        margin: 0 1rem 0 1rem;
+        transform: scale(0.8);
+        padding-top: 1rem;
+    }
+
+    // Estilos de texto--------
+    h1 {
+        font-family: 'Aleo', serif;
+        background-color: $blue-classic;
+        font-size: 1.2rem;
+        line-height: 1.8;
+        color: $white;
+        font-weight: lighter;
+    }
+
+    h3 {
+        @include texto-ppal ($blue-depths, 1rem);
+        line-height: 1.8;
+        font-weight: bold;
+    }
+
+    h4 {
+        @include texto-ppal ($blue-depths, 1rem);
+        line-height: 1.5;
+        font-weight: normal;
+    }
+
+    h5 {
+        @include texto-base ($blue-depths, 1rem);
+        line-height: 1.5;
+        font-weight: normal;
+    }
+
+    p {
+        @include texto-base ($blue-depths, 1rem);
+        line-height: 1.2;
+        font-weight: lighter;
+    }
+
+    i {
+        @include texto-ppal ($blue-depths, 0.9rem);
+        padding-left: 1rem;
+
+        &:hover {
+            font-size: 1rem;
+        }
+        &:active {
+            color: $blue-classic;
+        }
+    }
+
+    .cursive {
+        font-style: oblique;
+    }
+
+    .strong {
+        font-weight: normal;
+    }
+
+    .title {
+        width: 100%;
+        text-align: center;
+        padding: 3rem 0 1rem 0;
+    }
+
+    .cuerpo {
+        width: 100%;
+        text-align: justify;
+    }
+
+    .link {
+        display: flex;
+        align-items: center;
+    }
+    
+    .work-exp {
+        padding-left: 0.8rem;
+
+        p {
+            padding-top: 0.3rem;
+        }
+        h4 {
+            padding-top: 0.3rem;
+        }
+    }
+
+    // Elementos--------
+
+    .img-container {
+        width: 25%;
+        height: auto;
+        overflow: hidden;
+
+        @media only screen and (max-width: $smartphone) {
+            width: 60%
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+
+    .datos {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 0 1rem 0;
+        line-height: 1.5;
+
+        .name {
+            font-weight: bold;
+            font-size: 1.2rem;
+            line-height: 2;
+        }
+        .mail {
+            font-weight: normal;
+            font-size: 1rem;
+        }
+        .born {
+            font-size: .8rem;
+            line-height: 2;
+        }
+    }
+
 }
