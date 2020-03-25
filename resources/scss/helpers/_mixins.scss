@@ -78,14 +78,18 @@
     color: $color;
 }
 
-@mixin texto-ppal ($color: $blue-depths, $font-size: 1rem) {
-    color: $color;
+@mixin texto-ppal ($font-size: 1rem, $line-height: 1.5, $font-weight: normal, $padding-top: 0.5rem) {
+    color: $blue-depths;
+    padding-top: $padding-top;
     font-size: $font-size;
-    padding-top: 0.5rem;
+    line-height: $line-height;
+    font-weight: $font-weight;
 }
 
-@mixin texto-base ($color: $blue-depths, $font-size: 1rem) {
-    color: $color;
+@mixin texto-base ($font-size: 1rem, $line-height: 1.5, $font-weight: normal, $padding-left: 1.5rem) {
+    color: $blue-depths;
     font-size: $font-size;
-    padding-left: 1.5rem;
+    line-height: $line-height;
+    font-weight: $font-weight;
+    padding-left: $padding-left;
 }

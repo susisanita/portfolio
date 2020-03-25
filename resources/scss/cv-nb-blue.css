@@ -20,6 +20,24 @@ body {
   font-size: 16px;
 }
 
+@media only screen and (min-width: 580px) and (max-width: 768px) {
+  body {
+    max-height: 2900px;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 580px) {
+  body {
+    max-height: 3300px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  body {
+    max-height: 3620px;
+  }
+}
+
 body a {
   text-decoration: none;
 }
@@ -246,6 +264,15 @@ body a {
     margin: 0 1rem 0 1rem;
     transform: scale(0.8);
     padding-top: 1rem;
+    position: relative;
+    top: -180px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .content {
+    position: relative;
+    top: -270px;
   }
 }
 
@@ -258,18 +285,28 @@ body a {
   font-weight: lighter;
 }
 
+.content h2 {
+  font-family: 'Aleo', serif;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #263056;
+  font-weight: normal;
+  text-transform: uppercase;
+  padding-top: 0.5rem;
+}
+
 .content h3 {
   color: #263056;
-  font-size: 1rem;
   padding-top: 0.5rem;
+  font-size: 1rem;
   line-height: 1.8;
   font-weight: bold;
 }
 
 .content h4 {
   color: #263056;
-  font-size: 1rem;
   padding-top: 0.5rem;
+  font-size: 1rem;
   line-height: 1.5;
   font-weight: normal;
 }
@@ -277,28 +314,36 @@ body a {
 .content h5 {
   color: #263056;
   font-size: 1rem;
-  padding-left: 1.5rem;
   line-height: 1.5;
   font-weight: normal;
+  padding-left: 1.5rem;
+}
+
+.content h6 {
+  color: #263056;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: normal;
+  padding-left: 0;
 }
 
 .content p {
   color: #263056;
+  padding-top: 0.5rem;
   font-size: 1rem;
-  padding-left: 1.5rem;
   line-height: 1.2;
   font-weight: lighter;
 }
 
 .content i {
   color: #263056;
-  font-size: 0.9rem;
   padding-top: 0.5rem;
+  font-size: 1rem;
   padding-left: 1rem;
 }
 
 .content i:hover {
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 .content i:active {
@@ -309,8 +354,16 @@ body a {
   font-style: oblique;
 }
 
-.content .strong {
+.content .normal {
   font-weight: normal;
+}
+
+.content .strong {
+  font-weight: bold;
+}
+
+.content .light {
+  font-weight: lighter;
 }
 
 .content .title {
@@ -329,12 +382,17 @@ body a {
   align-items: center;
 }
 
+.content .other {
+  padding-left: 1rem;
+}
+
 .content .work-exp {
   padding-left: 0.8rem;
 }
 
 .content .work-exp p {
   padding-top: 0.3rem;
+  padding-left: 1.5rem;
 }
 
 .content .work-exp h4 {
@@ -345,6 +403,12 @@ body a {
   width: 25%;
   height: auto;
   overflow: hidden;
+}
+
+@media only screen and (min-width: 480px) and (max-width: 580px) {
+  .content .img-container {
+    width: 60%;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -378,7 +442,54 @@ body a {
   font-size: 1rem;
 }
 
+.content .datos .mail a {
+  color: #004680;
+}
+
 .content .datos .born {
   font-size: .8rem;
   line-height: 2;
+}
+
+.content .skills {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 580px) {
+  .content .skills {
+    flex-direction: column;
+  }
+}
+
+.content .skills .skills-1 {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+@media only screen and (max-width: 580px) {
+  .content .skills .skills-1 {
+    width: 100%;
+  }
+}
+
+.content .skills .skills-1 .software {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 580px) {
+  .content .skills .skills-1 .software {
+    padding-bottom: 2rem;
+  }
+}
+
+.content .skills .skills-1 .software .programs p {
+  font-weight: normal;
+}
+
+.content .skills .skills-1 .software .levels {
+  text-align: end;
 }

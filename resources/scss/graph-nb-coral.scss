@@ -15,7 +15,7 @@ body {
 // HEADER -------------------------------------------
 // Navbar ----------------
 .navbar {
-    @include navbar ($livingcoral)  // change color
+    @include navbar ($livingcoral);  // change color
 
     @media only screen and (min-width: 500px) and (max-width: 720px) {
         height: auto;

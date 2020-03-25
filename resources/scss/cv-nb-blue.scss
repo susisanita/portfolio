@@ -7,6 +7,16 @@
 body {
     font-size: 16px;
 
+    @media only screen and (min-width: 580px) and (max-width: $tablet) {
+        max-height: 2900px; 
+    }
+    @media only screen and (min-width: $smartphone) and (max-width: 580px) {
+        max-height: 3300px; 
+    }
+    @media only screen and (max-width: $smartphone) {
+        max-height: 3620px; 
+    }
+
     a {
         text-decoration: none;
     }
@@ -206,7 +216,15 @@ body {
         margin: 0 1rem 0 1rem;
         transform: scale(0.8);
         padding-top: 1rem;
+        position: relative;
+        top: -180px;
     }
+
+    @media only screen and (max-width: $smartphone) {
+        position: relative;
+        top: -270px; 
+    }
+    
 
     // Estilos de texto--------
     h1 {
@@ -218,36 +236,44 @@ body {
         font-weight: lighter;
     }
 
+    h2 {
+        font-family: 'Aleo', serif;
+        font-size: 1.1rem;
+        line-height: 1.5;
+        color: $blue-depths;
+        font-weight: normal;
+        text-transform: uppercase;
+        padding-top: 0.5rem;
+    }
+    
     h3 {
-        @include texto-ppal ($blue-depths, 1rem);
-        line-height: 1.8;
-        font-weight: bold;
+        @include texto-ppal (1rem, 1.8, bold, 0.5rem);
     }
 
     h4 {
-        @include texto-ppal ($blue-depths, 1rem);
-        line-height: 1.5;
-        font-weight: normal;
+        @include texto-ppal (1rem, 1.5, normal, 0.5rem);
     }
 
     h5 {
-        @include texto-base ($blue-depths, 1rem);
-        line-height: 1.5;
-        font-weight: normal;
+        @include texto-base (1rem, 1.5, normal, 1.5rem);
+    }
+
+    h6 {
+        @include texto-base (1rem, 1.5, normal, 0);
     }
 
     p {
-        @include texto-base ($blue-depths, 1rem);
-        line-height: 1.2;
-        font-weight: lighter;
+        @include texto-ppal (1rem, 1.2, lighter, 0.5rem);
     }
 
     i {
-        @include texto-ppal ($blue-depths, 0.9rem);
+        color: $blue-depths;
+        padding-top: 0.5rem;
+        font-size: 1rem;
         padding-left: 1rem;
 
         &:hover {
-            font-size: 1rem;
+            font-size: 1.1rem;
         }
         &:active {
             color: $blue-classic;
@@ -258,8 +284,16 @@ body {
         font-style: oblique;
     }
 
-    .strong {
+    .normal {
         font-weight: normal;
+    }
+
+    .strong {
+        font-weight: bold;
+    }
+
+    .light {
+        font-weight: lighter;
     }
 
     .title {
@@ -277,12 +311,17 @@ body {
         display: flex;
         align-items: center;
     }
+
+    .other {
+        padding-left: 1rem;
+    }
     
     .work-exp {
         padding-left: 0.8rem;
 
         p {
             padding-top: 0.3rem;
+            padding-left: 1.5rem;
         }
         h4 {
             padding-top: 0.3rem;
@@ -296,8 +335,11 @@ body {
         height: auto;
         overflow: hidden;
 
+        @media only screen and (min-width: $smartphone) and (max-width: 580px) {
+            width: 60%;
+        }
         @media only screen and (max-width: $smartphone) {
-            width: 60%
+            width: 60%;
         }
 
         img {
@@ -322,6 +364,9 @@ body {
         .mail {
             font-weight: normal;
             font-size: 1rem;
+            a {
+                color: $blue-classic
+            }
         }
         .born {
             font-size: .8rem;
@@ -329,4 +374,41 @@ body {
         }
     }
 
+    .skills {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        @media only screen and (max-width: 580px) {
+            flex-direction: column;
+        }
+
+        .skills-1 {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+
+            @media only screen and (max-width: 580px) {
+                width: 100%;
+            }
+
+            .software {
+                display: flex;
+                justify-content: space-between;
+
+                @media only screen and (max-width: 580px) {
+                    padding-bottom: 2rem;
+                }
+
+                .programs {
+                    p {
+                        font-weight: normal;
+                    }
+                }
+                .levels {
+                    text-align: end;
+                }
+            }
+        }      
+    }
 }
