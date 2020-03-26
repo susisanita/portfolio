@@ -188,10 +188,16 @@ body {
         color: $livingcoral;  // change color
         font-size: 1.4rem;
 
-        @media only screen and (max-width: $tablet) {
+        @media only screen and (min-width: $smartphone) and (max-width: $tablet) {
             width: 150px;
             height: 150px;
             font-size: 1.2rem;
+        }
+        @media only screen and (max-width: $smartphone) {
+            width: 120px;
+            height: 120px;
+            font-size: 0.9rem;
+            margin: 0.8rem;
         }
 
         &:hover {
@@ -202,8 +208,11 @@ body {
         &:active {
             font-size: 1.5rem;
 
-            @media only screen and (max-width: $tablet) {
+            @media only screen  and (min-width: $smartphone) and (max-width: $tablet) {
                 font-size: 1.3rem;
+            }
+            @media only screen and (max-width: $smartphone) {
+                font-size: 1rem;
             }
         }
     }
