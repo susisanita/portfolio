@@ -134,23 +134,103 @@ body {
         font-size: 1.2rem;
         color: $livingcoral; // change color
         position: fixed;
-        margin: 1rem 0 0 2.2rem;
+        margin: 5.4rem 0 0 2.2rem; // margin-top 70px + 1rem (por navbar)
         padding: 0.3rem;
 
         @media only screen and (max-width: 720px) {
             margin-left: 1.7rem;
         }
         @media only screen and (max-width: 500px) {
-            margin-left: 1.2rem;
+            margin-left: 0.7rem;
+            font-size: 1rem;
         }
 
         &:hover {
             font-size: 1.3rem;
+
+            @media only screen and (max-width: 500px) {
+                font-size: 1.1rem;
+            }
         }
         &:active {
             color: $white;
             background-color: $livingcoral; // change color
             border-radius: 7px;
         }
+    }
+}
+
+
+// MENU -------------------------------------------
+
+#menu {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 2rem 2rem 2rem;
+
+    .menu-item {
+        width: 180px;
+        height: 180px;
+        border: 6px solid $livingcoral; // change color
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem 1.5rem;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
+        text-align: center;
+        line-height: 1.2;
+        color: $livingcoral;  // change color
+        font-size: 1.4rem;
+
+        &:hover {
+            background-color: $livingcoral; // change color
+            color: $white;
+            border: none;
+        }
+        &:active {
+            font-size: 1.5rem;
+        }
+    }
+
+    #photography {
+        // text-transform: uppercase;
+        // font-size: 1.25rem;
+        border: 9px double $livingcoral;
+
+
+    }
+}
+
+.img-container {
+    width: 90%;
+    height: auto;
+    overflow: hidden;
+    margin: 1rem;
+
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+}
+
+.section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 3rem;
+        color: $livingcoral; // change color
+        font-weight: bold;
+        text-align: center;
+        margin-top: 100px;
     }
 }

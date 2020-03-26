@@ -1,0 +1,228 @@
+@import "helpers/variables";
+@import "helpers/fonts";
+@import "helpers/placeholders";
+@import "helpers/mixins";
+
+// GENERAL -------------------------------------------
+body {
+    font-size: 16px;
+    
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+// HEADER -------------------------------------------
+// Navbar ----------------
+.navbar {
+    @include navbar ($blue-classic);   // change color
+
+    @media only screen and (min-width: 500px) and (max-width: 720px) {
+        height: auto;
+        min-height: 70px;
+        padding: 0 1rem;
+    }
+    @media only screen and (max-width: 500px) {
+        justify-content: space-between;
+        padding-right: 0;
+    }
+
+    ul {
+        width: 100%;
+        height: 70px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+
+        @media only screen and (min-width: 500px) and (max-width: 720px) {
+            height: auto;
+            display: flex;
+            justify-content: space-around; 
+        }
+        @media only screen and (max-width: 500px) {
+            display: flex;
+            justify-content: space-evenly; 
+        }
+
+        li {
+            a {
+                @extend %nav-link;
+                
+                @media only screen and (max-width: 720px) {
+                    margin: 0 0.5rem;
+                    padding: 0.5rem;
+                }
+                @media only screen and (max-width: 500px) {
+                    transform: scale(0.9);
+                    margin: 0 0.3rem;
+                }
+            }
+        }
+    }
+    
+    #link-selected {
+        a {
+            @include selected ($white);
+
+            // &:hover {
+            //     @include selected-hover (bold);
+            // }
+            &:active {
+                @include selected-active ($livingcoral); // change color
+            }
+        }
+    }
+
+    #link-non-selected {
+        a {
+            @include non-selected ($cream);
+
+            &:hover {
+                @include non-selected-hover (normal);
+            }
+            &:active {
+                @include selected-active ($livingcoral); // change color
+            }
+        }
+    }
+
+
+    #graph1 {
+        @media only screen and (max-width: 500px) {
+            display: none;
+        }
+    }
+
+    #graph2 {
+        display: none;
+        @media only screen and (max-width: 500px) {
+            display: block;
+        }
+    }
+
+    #index {
+        display: inline-flex;
+        align-items: center;
+
+        @media only screen and (max-width: 720px) {
+            justify-content: center;
+        }
+
+        i {
+            font-size: 1.2rem;
+            padding: 0.5rem 1rem;
+            color: $white;
+
+            @media only screen and (max-width: 500px) {
+                padding: 0.5rem 1rem 0.5rem 0; 
+            }
+
+            &:hover {
+                font-size: 1.3rem;
+            }
+            &:active {
+                @include selected-active ($livingcoral); // change color
+            }
+        }
+    }
+}
+
+
+// Menu Icon ----------------
+#menu-icon {
+    i {
+        font-size: 1.2rem;
+        color: $blue-classic; // change color
+        position: fixed;
+        margin: 5.4rem 0 0 2.2rem; // margin-top 70px + 1rem (por navbar)
+        padding: 0.3rem;
+
+        @media only screen and (max-width: 720px) {
+            margin-left: 1.7rem;
+        }
+        @media only screen and (max-width: 500px) {
+            margin-left: 0.7rem;
+            font-size: 1rem;
+        }
+
+        &:hover {
+            font-size: 1.3rem;
+
+            @media only screen and (max-width: 500px) {
+                font-size: 1.1rem;
+            }
+        }
+        &:active {
+            color: $white;
+            background-color: $blue-classic; // change color
+            border-radius: 7px;
+        }
+    }
+}
+
+// MENU -------------------------------------------
+
+#menu {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 2rem 2rem 2rem;
+
+    .menu-item {
+        width: 180px;
+        height: 180px;
+        border: 6px solid $blue-classic; // change color
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem 1.5rem;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
+        text-align: center;
+        line-height: 1.2;
+        color: $blue-classic;  // change color
+        font-size: 1.4rem;
+
+        &:hover {
+            background-color: $blue-classic;  // change color
+            color: $white;
+            border: none;
+        }
+        &:active {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.img-container {
+    width: 90%;
+    height: auto;
+    overflow: hidden;
+    margin: 1rem;
+
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+}
+
+.section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 3rem;
+        color: $blue-classic; // change color
+        font-weight: bold;
+        text-align: center;
+        margin-top: 100px;
+    }
+}

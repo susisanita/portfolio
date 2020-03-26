@@ -78,6 +78,9 @@
     color: $color;
 }
 
+
+// CV -----------------------------------------------------------
+
 @mixin texto-ppal ($font-size: 1rem, $line-height: 1.5, $font-weight: normal, $padding-top: 0.5rem) {
     color: $blue-depths;
     padding-top: $padding-top;
