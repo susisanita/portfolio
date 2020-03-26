@@ -170,6 +170,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    align-content: center;
     padding: 70px 2rem 2rem 2rem;
 
     .menu-item {
@@ -187,6 +188,12 @@ body {
         color: $blue-classic;  // change color
         font-size: 1.4rem;
 
+        @media only screen and (max-width: $tablet) {
+            width: 150px;
+            height: 150px;
+            font-size: 1.2rem;
+        }
+
         &:hover {
             background-color: $blue-classic;  // change color
             color: $white;
@@ -194,6 +201,10 @@ body {
         }
         &:active {
             font-size: 1.5rem;
+
+            @media only screen and (max-width: $tablet) {
+                font-size: 1.3rem;
+            }
         }
     }
 }
@@ -224,5 +235,10 @@ body {
         font-weight: bold;
         text-align: center;
         margin-top: 100px;
+        margin-bottom: 1rem;
+
+        @media only screen and (max-width: $tablet) {
+            font-size: 2rem;
+        }
     }
 }

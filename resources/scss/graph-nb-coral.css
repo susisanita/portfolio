@@ -199,6 +199,7 @@ body a {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  align-content: center;
   padding: 70px 2rem 2rem 2rem;
 }
 
@@ -218,6 +219,14 @@ body a {
   font-size: 1.4rem;
 }
 
+@media only screen and (max-width: 768px) {
+  #menu .menu-item {
+    width: 150px;
+    height: 150px;
+    font-size: 1.2rem;
+  }
+}
+
 #menu .menu-item:hover {
   background-color: #FF6F61;
   color: #ffffff;
@@ -226,6 +235,12 @@ body a {
 
 #menu .menu-item:active {
   font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 768px) {
+  #menu .menu-item:active {
+    font-size: 1.3rem;
+  }
 }
 
 #menu #photography {
@@ -259,4 +274,11 @@ body a {
   font-weight: bold;
   text-align: center;
   margin-top: 100px;
+  margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .section h1 {
+    font-size: 2rem;
+  }
 }
