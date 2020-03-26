@@ -217,13 +217,13 @@ body {
         }
     }
 
+    // ONLY GRAPHIC DESIGN 
     #photography {
         // text-transform: uppercase;
         // font-size: 1.25rem;
         border: 9px double $livingcoral;
-
-
     }
+    // ---------------------
 }
 
 .img-container {
@@ -238,6 +238,136 @@ body {
         display: block;
     }
 }
+
+// ONLY GRAPHIC DESIGN 
+#photo {
+    .img-container{
+        width: 100%;
+        margin: 0;
+    }
+
+    #img-web {
+        display: block;
+
+        @media only screen and (max-width: $smartphone) {
+            display: none;
+        }
+
+    }
+
+    #img-mobile {
+        display: none;
+        
+        @media only screen and (max-width: $smartphone) {
+            display: block;
+        }
+    }
+}
+
+.comments {
+    width: 40%;
+    margin: 0 auto 5rem auto;
+    text-align: center;
+    color: $blue-classic;
+    line-height: 2;
+
+    @media only screen and (max-width: $tablet) {
+        width: 70%;
+    }
+    
+    h3 {
+        font-family: 'Alcubierre', sans-serif;
+        font-size: 3rem;
+        font-weight: lighter;
+        margin-top: 3rem;
+    }
+
+    h4 {
+        font-family: 'Alcubierre', sans-serif;
+        font-size: 1rem;
+        font-weight: lighter;
+        margin-bottom: 2rem;
+        
+    }
+
+    p {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1rem;
+        font-weight: lighter;
+        text-align: justify;
+    }
+}
+
+#video-menu {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+
+    .video-item {
+        width: 100%;
+        height: auto;
+        border: 2px solid $blue-classic;
+        display: inline-flex;
+        align-content: center;
+        justify-content: center;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: lighter;
+        font-size: 1.4rem;
+        line-height: 1.2;
+        padding: 1rem;
+        margin: 1rem auto;
+        color: $blue-classic;
+    }
+
+    .link-working {
+        &:hover {
+            border: 4px solid $blue-classic;
+            font-weight: bolder;
+        }
+        &:active {
+            border: 4px solid $livingcoral;
+        }
+    }
+}
+
+#video {
+    .comments {
+
+        @media only screen and (max-width: $tablet) {
+            width: 70%;
+        }
+        @media only screen and (max-width: $smartphone) {
+            width: 90%;
+        }
+
+        width: 50%;
+        p {
+            text-align: center;
+        }
+    }
+}
+
+.cursive {
+    font-style: oblique;
+}
+
+.normal {
+    font-weight: normal;
+}
+
+.strong {
+    font-weight: bold;
+}
+
+.light {
+    font-weight: lighter;
+}
+
+// ---------------------
 
 .section {
     width: 100%;
@@ -254,7 +384,7 @@ body {
         margin-top: 100px;
         margin-bottom: 1rem;
 
-        @media only screen and (max-width: $tablet) {
+        @media only screen and (max-width: $smartphone) {
             font-size: 2rem;
         }
     }

@@ -194,8 +194,8 @@ body {
             font-size: 1.2rem;
         }
         @media only screen and (max-width: $smartphone) {
-            width: 130px;
-            height: 130px;
+            width: 130px; //change size
+            height: 130px; //change size
             font-size: 0.9rem;
             margin: 0.8rem;
         }
@@ -246,7 +246,7 @@ body {
         margin-top: 100px;
         margin-bottom: 1rem;
 
-        @media only screen and (max-width: $tablet) {
+        @media only screen and (max-width: $smartphone) {
             font-size: 2rem;
         }
     }

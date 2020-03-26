@@ -275,6 +275,137 @@ body a {
   display: block;
 }
 
+#photo .img-container {
+  width: 100%;
+  margin: 0;
+}
+
+#photo #img-web {
+  display: block;
+}
+
+@media only screen and (max-width: 480px) {
+  #photo #img-web {
+    display: none;
+  }
+}
+
+#photo #img-mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 480px) {
+  #photo #img-mobile {
+    display: block;
+  }
+}
+
+.comments {
+  width: 40%;
+  margin: 0 auto 5rem auto;
+  text-align: center;
+  color: #004680;
+  line-height: 2;
+}
+
+@media only screen and (max-width: 768px) {
+  .comments {
+    width: 70%;
+  }
+}
+
+.comments h3 {
+  font-family: 'Alcubierre', sans-serif;
+  font-size: 3rem;
+  font-weight: lighter;
+  margin-top: 3rem;
+}
+
+.comments h4 {
+  font-family: 'Alcubierre', sans-serif;
+  font-size: 1rem;
+  font-weight: lighter;
+  margin-bottom: 2rem;
+}
+
+.comments p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: lighter;
+  text-align: justify;
+}
+
+#video-menu {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+#video-menu .video-item {
+  width: 100%;
+  height: auto;
+  border: 2px solid #004680;
+  display: inline-flex;
+  align-content: center;
+  justify-content: center;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: lighter;
+  font-size: 1.4rem;
+  line-height: 1.2;
+  padding: 1rem;
+  margin: 1rem auto;
+  color: #004680;
+}
+
+#video-menu .link-working:hover {
+  border: 4px solid #004680;
+  font-weight: bolder;
+}
+
+#video-menu .link-working:active {
+  border: 4px solid #FF6F61;
+}
+
+#video .comments {
+  width: 50%;
+}
+
+@media only screen and (max-width: 768px) {
+  #video .comments {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #video .comments {
+    width: 90%;
+  }
+}
+
+#video .comments p {
+  text-align: center;
+}
+
+.cursive {
+  font-style: oblique;
+}
+
+.normal {
+  font-weight: normal;
+}
+
+.strong {
+  font-weight: bold;
+}
+
+.light {
+  font-weight: lighter;
+}
+
 .section {
   width: 100%;
   display: flex;
@@ -292,7 +423,7 @@ body a {
   margin-bottom: 1rem;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 480px) {
   .section h1 {
     font-size: 2rem;
   }
