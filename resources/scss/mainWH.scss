@@ -3,6 +3,14 @@
 @import "helpers/placeholders";
 @import "helpers/mixins";
 
+
+@font-face {
+    font-family: "Alcubierre";
+    src: url("/resources/fonts/Alcubierre.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
 // GENERAL -------------------------------------------
 body {
     font-size: 16px;
@@ -51,7 +59,7 @@ header {
         }
     
         .cv {
-            @include square ($white, $blue-classic, 1.5rem, 6px solid $blue-classic);
+            @include square ($white, $blue-depths, 1.5rem, 6px solid $blue-depths);
     
             @media only screen and (max-width: $tablet) {
                 margin: 0;
@@ -63,10 +71,10 @@ header {
             }
     
             &:hover {
-                @include square-hover (10px solid $blue-classic, 2rem);
+                @include square-hover (10px solid $blue-depths, 2rem);
             }
             &:active {
-                @include square-active (10px solid $blue-classic, 2rem, $blue-classic, $cream);
+                @include square-active (10px solid $blue-depths, 2rem, $blue-depths, $white);
             }
         }
     

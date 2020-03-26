@@ -5,6 +5,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Alcubierre";
+  src: url("/resources/fonts/Alcubierre.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   font-size: 16px;
 }
@@ -64,9 +71,9 @@ header .container .cv {
   align-items: center;
   font-weight: lighter;
   background-color: #ffffff;
-  color: #004680;
+  color: #263056;
   font-size: 1.5rem;
-  border: 6px solid #004680;
+  border: 6px solid #263056;
 }
 
 @media only screen and (max-width: 768px) {
@@ -86,7 +93,7 @@ header .container .cv:hover {
   cursor: pointer;
   font-weight: bold;
   font-size: 2rem;
-  border: 10px solid #004680;
+  border: 10px solid #263056;
   transition: width, height, font-size, font-weight;
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
@@ -99,9 +106,9 @@ header .container .cv:active {
   cursor: pointer;
   font-weight: bold;
   font-size: 2rem;
-  border: 10px solid #004680;
-  background-color: #004680;
-  color: #F1F0E2;
+  border: 10px solid #263056;
+  background-color: #263056;
+  color: #ffffff;
   transition: font-size, border, background-color, color;
   transition-duration: 0.1s;
   transition-timing-function: ease-in-out;

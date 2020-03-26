@@ -96,7 +96,7 @@ body a {
 }
 
 .navbar #link-non-selected a {
-  color: #F1F0E2;
+  color: #ffffff;
   font-weight: lighter;
 }
 
@@ -304,7 +304,7 @@ body a {
   width: 40%;
   margin: 0 auto 5rem auto;
   text-align: center;
-  color: #004680;
+  color: #263056;
   line-height: 2;
 }
 
@@ -348,7 +348,7 @@ body a {
 #video-menu .video-item {
   width: 100%;
   height: auto;
-  border: 2px solid #004680;
+  border: 2px solid #263056;
   display: inline-flex;
   align-content: center;
   justify-content: center;
@@ -358,19 +358,20 @@ body a {
   line-height: 1.2;
   padding: 1rem;
   margin: 1rem auto;
-  color: #004680;
+  color: #263056;
 }
 
 #video-menu .link-working:hover {
-  border: 4px solid #004680;
+  border: 4px solid #263056;
   font-weight: bolder;
 }
 
 #video-menu .link-working:active {
-  border: 4px solid #FF6F61;
+  border: 4px solid #004680;
 }
 
 #video .comments {
+  margin-bottom: 1rem;
   width: 50%;
 }
 
@@ -383,6 +384,12 @@ body a {
 @media only screen and (max-width: 480px) {
   #video .comments {
     width: 90%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #video .comments h4 {
+    font-size: 0.9rem;
   }
 }
 
@@ -416,7 +423,7 @@ body a {
 .section h1 {
   font-family: 'Open Sans', sans-serif;
   font-size: 3rem;
-  color: #FF6F61;
+  color: #263056;
   font-weight: bold;
   text-align: center;
   margin-top: 100px;
@@ -425,6 +432,6 @@ body a {
 
 @media only screen and (max-width: 480px) {
   .section h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
